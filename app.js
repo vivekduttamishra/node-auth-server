@@ -6,12 +6,9 @@ let app=express();
 
 app.use(configErrorChecker(ERRORS));
 
+app.use(express.static('public'));
 
 
-app.use((req,res)=>{
-    
-    res.send(`<h1>Under Construction!</h1>`);
-});
 
 app.listen(PORT, err=>{
     if(err)
